@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Terms of Service for Atomic Security, a Discord security and moderation bot." />
+  <title>Atomic Security — Terms of Service</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --border: #1f2b45;
+      --text: #e8edf7;
+      --muted: #9aa8c2;
+      --accent: #4f8cff;
+      --accent-2: #22d3ee;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --radius: 18px;
+      --max-width: 1080px;
+      --header-height: 74px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1000px 500px at 85% -10%, rgba(79, 140, 255, .18), transparent 60%),
+        radial-gradient(800px 450px at 5% 10%, rgba(34, 211, 238, .10), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      min-height: var(--header-height);
+      backdrop-filter: blur(18px);
+      background: rgba(7, 11, 20, .92);
+      border-bottom: 1px solid rgba(31, 43, 69, .8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: var(--header-height);
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand:hover {
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #04101f;
+      font-weight: 900;
+      box-shadow: 0 10px 30px rgba(79, 140, 255, .28);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(79, 140, 255, .35);
+      border-radius: 999px;
+      background: rgba(79, 140, 255, .12);
+      color: #dbeafe;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .cta:hover {
+      background: rgba(79, 140, 255, .2);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 88px 0 56px;
+      border-bottom: 1px solid rgba(31, 43, 69, .65);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border: 1px solid rgba(52, 211, 153, .3);
+      border-radius: 999px;
+      background: rgba(52, 211, 153, .1);
+      color: var(--success);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 22px 0 16px;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      line-height: 1.05;
+      letter-spacing: -.045em;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(17, 26, 45, .75);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 48px;
+      padding: 56px 0 90px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 98px;
+      align-self: start;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(13, 20, 36, .88);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+    }
+
+    .sidebar-title {
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .toc {
+      display: grid;
+      gap: 4px;
+      font-size: 14px;
+    }
+
+    .toc a {
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      color: var(--muted);
+    }
+
+    .toc a:hover {
+      border-color: rgba(79, 140, 255, .2);
+      background: rgba(79, 140, 255, .08);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .terms-card {
+      position: relative;
+      margin-bottom: 24px;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(17, 26, 45, .92), rgba(13, 20, 36, .88));
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+    }
+
+    /*
+      The number is the actual anchor target. This lets the page
+      scroll directly to the number instead of to the card's outer edge.
+    */
+    .section-number {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(79, 140, 255, .28);
+      border-radius: 12px;
+      background: rgba(79, 140, 255, .14);
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 800;
+      scroll-margin-top: calc(var(--header-height) + 12px);
+    }
+
+    .terms-card h2 {
+      margin: 0 0 16px;
+      font-size: 1.65rem;
+      letter-spacing: -.03em;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 26px 0 10px;
+      color: #dbeafe;
+      font-size: 1.08rem;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: #c9d3e6;
+    }
+
+    ul {
+      margin: 0 0 16px;
+      padding-left: 22px;
+      color: #c9d3e6;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px solid rgba(251, 191, 36, .3);
+      border-radius: 14px;
+      background: rgba(251, 191, 36, .08);
+      color: #fde68a;
+      font-size: 14px;
+    }
+
+    .note strong {
+      color: #fde68a;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 16px;
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid rgba(79, 140, 255, .28);
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(79, 140, 255, .12), rgba(34, 211, 238, .07));
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 15px;
+    }
+
+    .contact-row span:first-child {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .contact-row span:last-child {
+      color: var(--text);
+      font-weight: 600;
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      padding: 30px 0;
+      border-top: 1px solid rgba(31, 43, 69, .8);
+      background: rgba(7, 11, 20, .85);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .sidebar {
+        position: static;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .terms-card {
+        padding: 26px;
+      }
+
+      .section-number {
+        scroll-margin-top: 12px;
+      }
+
+      .contact-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .contact-row span:last-child {
+        text-align: left;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark">A</span>
+        Atomic Security
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#section-1">Terms</a>
+        <a href="#section-5">Security</a>
+        <a href="#section-9">Privacy</a>
+        <a href="#section-13">Contact</a>
+      </nav>
+
+      <a class="cta" href="#section-13">Contact</a>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container">
+      <span class="eyebrow">● Service Terms</span>
+      <h1>Atomic Security<br><span>Terms of Service</span></h1>
+      <p>
+        These Terms govern the use of Atomic Security, a Discord security and moderation bot.
+        Please read them before inviting, configuring, or using the Bot.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">Last updated: October 25, 2026</span>
+        <span class="pill">Discord security service</span>
+        <span class="pill">13 sections</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container layout">
+    <aside class="sidebar">
+      <p class="sidebar-title">Contents</p>
+      <nav class="toc" aria-label="Terms of Service contents">
+        <a href="#section-1">1. Acceptance of Terms</a>
+        <a href="#section-2">2. Description of Service</a>
+        <a href="#section-3">3. Acceptable Use</a>
+        <a href="#section-4">4. Administrator Responsibilities</a>
+        <a href="#section-5">5. Automated Moderation</a>
+        <a href="#section-6">6. Permissions &amp; Third Parties</a>
+        <a href="#section-7">7. Availability &amp; Changes</a>
+        <a href="#section-8">8. Suspension &amp; Termination</a>
+        <a href="#section-9">9. Privacy &amp; Data Handling</a>
+        <a href="#section-10">10. Intellectual Property</a>
+        <a href="#section-11">11. Disclaimer &amp; Liability</a>
+        <a href="#section-12">12. Changes to These Terms</a>
+        <a href="#section-13">13. Contact</a>
+      </nav>
+    </aside>
+
+    <main>
+      <article class="terms-card">
+        <span class="section-number" id="section-1">1</span>
+        <h2>Acceptance of Terms</h2>
+        <p>
+          These Terms of Service (“Terms”) govern the use of Atomic Security (“Atomic,” “the Bot,” “we,” “us,” or “our”).
+        </p>
+        <p>
+          By inviting, configuring, or using Atomic Security in a Discord server, you agree to these Terms. If you do not agree with them, discontinue using the Bot and remove it from your server.
+        </p>
+        <p>
+          If you use Atomic Security on behalf of a server, organization, or other entity, you confirm that you are authorized to configure and use the Bot on its behalf.
+        </p>
+        <p>
+          Your use of Atomic Security must also comply with Discord’s Terms of Service, Community Guidelines, Developer Terms of Service, and other applicable policies.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-2">2</span>
+        <h2>Description of Service</h2>
+        <p>
+          Atomic Security is a Discord security and moderation bot designed to help server administrators detect, monitor, and respond to potentially harmful activity.
+        </p>
+        <p>Depending on the enabled features and current implementation, the Bot may provide:</p>
+        <ul>
+          <li><strong>Honeypot protection:</strong> Detecting activity in designated honeypot channels.</li>
+          <li><strong>Anti-raid protection:</strong> Identifying suspicious patterns of rapid member joins or coordinated activity.</li>
+          <li><strong>Anti-spam and scam detection:</strong> Flagging potentially harmful messages, links, or repetitive behavior.</li>
+          <li><strong>Moderation actions:</strong> Applying configured actions, such as warnings, message removal, kicking, or banning, where supported and authorized.</li>
+          <li><strong>Security logging:</strong> Recording relevant security events and moderation outcomes.</li>
+          <li><strong>Server configuration:</strong> Allowing authorized administrators to configure security settings and protection behavior.</li>
+        </ul>
+        <p>
+          Features may change, be added, be removed, or become temporarily unavailable. The precise functionality available depends on the version of the Bot and its configuration.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-3">3</span>
+        <h2>Acceptable Use</h2>
+        <p>
+          You agree to use Atomic Security lawfully, responsibly, and only for its intended security and moderation purposes.
+        </p>
+        <p>You must not use the Bot to:</p>
+        <ul>
+          <li>Harass, threaten, target, or unfairly discriminate against individuals.</li>
+          <li>Conduct unauthorized surveillance or collect personal information without an appropriate lawful basis.</li>
+          <li>Circumvent Discord’s security systems, platform restrictions, or rate limits.</li>
+          <li>Distribute malware, malicious links, or other harmful content.</li>
+          <li>Abuse moderation features to unfairly punish, intimidate, or silence users.</li>
+          <li>Attempt to disrupt the Bot, its hosting environment, or its associated services.</li>
+          <li>Exploit vulnerabilities or interfere with the Bot’s intended operation.</li>
+          <li>Use the Bot in a way that violates applicable laws or third-party rights.</li>
+        </ul>
+        <p>
+          We may restrict access to Atomic Security when we reasonably believe that its use creates a security risk or violates these Terms, subject to applicable law.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-4">4</span>
+        <h2>Server Administrator Responsibilities</h2>
+        <p>
+          Server administrators are responsible for how Atomic Security is configured and used within their servers. By installing or managing the Bot, administrators agree to:
+        </p>
+        <ul>
+          <li>Configure security features and moderation settings appropriately.</li>
+          <li>Assign only the permissions required for the Bot’s intended functionality.</li>
+          <li>Ensure that the Bot has sufficient permissions to perform authorized actions.</li>
+          <li>Review moderation decisions and security logs when appropriate.</li>
+          <li>Provide clear server rules and inform members about relevant moderation practices.</li>
+          <li>Ensure that their server’s use of the Bot complies with applicable laws and Discord policies.</li>
+          <li>Maintain appropriate access controls for administrative commands and configuration settings.</li>
+        </ul>
+        <p>
+          Administrators are responsible for selecting the punishment settings used on their servers. They should carefully consider the consequences of automated actions, particularly where those actions may restrict a member’s access to the community.
+        </p>
+        <p>
+          Atomic Security is a tool to support server security; it does not replace responsible administration or human judgment.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-5">5</span>
+        <h2>Automated Moderation and Security Limitations</h2>
+        <p>
+          Atomic Security may use automated rules, thresholds, and detection logic to identify suspicious activity and trigger configured security actions.
+        </p>
+        <p>Automated systems are not infallible. The Bot may:</p>
+        <ul>
+          <li>Incorrectly flag legitimate activity as suspicious.</li>
+          <li>Fail to detect certain malicious or coordinated behavior.</li>
+          <li>Misinterpret messages, links, or activity patterns.</li>
+          <li>Apply a configured action based on incomplete information.</li>
+          <li>Be unable to act because of insufficient permissions, API errors, outages, or Discord platform limitations.</li>
+        </ul>
+        <p>
+          A security alert does not necessarily prove that a user has acted maliciously. Similarly, the absence of an alert does not guarantee that a server is safe.
+        </p>
+        <p>
+          Server administrators should review important incidents and provide an appropriate way to resolve mistaken moderation decisions. Where possible, administrators should test security settings before relying on them in a live environment.
+        </p>
+        <p>
+          Atomic Security does not guarantee complete protection against raids, scams, spam, malware, account compromise, or other threats.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-6">6</span>
+        <h2>Permissions and Third-Party Services</h2>
+        <p>
+          Atomic Security operates through Discord and depends on Discord’s APIs, permissions, and infrastructure.
+        </p>
+        <p>
+          The Bot can perform only actions supported by Discord and permitted by its assigned permissions. Features may fail if permissions are missing, roles are ordered incorrectly, channels are inaccessible, or Discord services are unavailable.
+        </p>
+        <p>You acknowledge that:</p>
+        <ul>
+          <li>Discord is a separate platform and is not operated by Atomic Security.</li>
+          <li>Discord may change its APIs, permissions, policies, or technical requirements.</li>
+          <li>Third-party hosting providers or infrastructure services may be required to operate the Bot.</li>
+          <li>Service interruptions or changes outside our control may affect availability.</li>
+        </ul>
+        <p>
+          Your use of Discord remains subject to Discord’s own terms and policies. These Terms do not replace or override applicable Discord requirements.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-7">7</span>
+        <h2>Availability, Updates, and Changes</h2>
+        <p>
+          We aim to maintain Atomic Security and improve its reliability, but uninterrupted availability cannot be guaranteed.
+        </p>
+        <p>
+          The Bot may experience downtime due to maintenance, software updates, hosting issues, technical failures, security incidents, or changes to third-party services.
+        </p>
+        <p>
+          We may modify, suspend, discontinue, or replace features when reasonably necessary for maintenance, security, development, or operational reasons.
+        </p>
+        <p>
+          Where reasonably practical, significant changes may be communicated through the official Atomic Security website or designated support channels.
+        </p>
+        <p>
+          Unless expressly stated otherwise, we do not guarantee a specific uptime percentage, response time, or continued availability of any particular feature.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-8">8</span>
+        <h2>Suspension and Termination</h2>
+        <p>
+          You may stop using Atomic Security at any time by removing it from your Discord server and discontinuing its use.
+        </p>
+        <p>
+          We may suspend, restrict, or discontinue the Bot or particular features when necessary to address security concerns, technical issues, abuse, legal requirements, or violations of these Terms.
+        </p>
+        <p>
+          Where appropriate and reasonably practical, we may provide notice explaining a restriction or suspension. Notice may not be possible where immediate action is necessary to protect users, systems, or data.
+        </p>
+        <p>
+          Following discontinuation, data handling and deletion will be governed by the Atomic Security Privacy Policy and applicable law.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-9">9</span>
+        <h2>Privacy and Data Handling</h2>
+        <p>
+          Atomic Security may process Discord identifiers, server configuration, security events, and other information required for its functionality.
+        </p>
+        <p>
+          The categories of information processed, purposes of processing, retention periods, third-party services, and available privacy rights are described in our Privacy Policy:
+          <a href="https://bxncx.github.io/atomic-privacy/" target="_blank" rel="noopener noreferrer">Atomic Security Privacy Policy</a>.
+        </p>
+        <p>
+          You should review the Privacy Policy to understand how information is handled. This section does not constitute consent to any processing that requires separate consent under applicable law.
+        </p>
+        <p>
+          Server administrators remain responsible for ensuring that their own use of the Bot and related moderation practices meet their legal obligations.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-10">10</span>
+        <h2>Intellectual Property and Branding</h2>
+        <p>
+          Unless otherwise stated, the Atomic Security name, branding, website content, original design elements, and software created for the project remain the property of their respective owners.
+        </p>
+        <p>
+          You may not falsely represent yourself as the creator, official operator, or authorized representative of Atomic Security.
+        </p>
+        <p>
+          You may not copy, redistribute, modify, or commercially exploit protected project materials except where permitted by the applicable license, written permission, or law.
+        </p>
+        <p>
+          Discord and its associated names, logos, and trademarks belong to their respective owners. Atomic Security is an independent project and does not claim ownership of Discord’s intellectual property or imply endorsement by Discord.
+        </p>
+        <p>
+          Any open-source components remain subject to their own applicable licenses.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-11">11</span>
+        <h2>Disclaimer and Limitation of Liability</h2>
+        <p>
+          Atomic Security is provided on an “as available” basis, subject to any rights and guarantees that cannot be excluded under applicable law.
+        </p>
+        <p>
+          To the extent permitted by applicable law, we do not guarantee that the Bot will be uninterrupted, error-free, completely secure, or capable of detecting every threat.
+        </p>
+        <p>
+          To the extent permitted by law, we are not responsible for losses arising from service interruptions, missed detections, false positives, incorrect configurations, failed moderation actions, or third-party platform failures.
+        </p>
+        <p>
+          Nothing in these Terms excludes or limits liability where such exclusion or limitation is prohibited by applicable law. Nothing in these Terms limits any mandatory consumer rights or other non-waivable legal protections.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-12">12</span>
+        <h2>Changes to These Terms</h2>
+        <p>
+          We may update these Terms to reflect changes in Atomic Security’s functionality, security practices, operational requirements, or applicable legal obligations.
+        </p>
+        <p>
+          The latest version will be published on the official Atomic Security website. The “Last Updated” date will be revised when changes are made.
+        </p>
+        <p>
+          Where required by applicable law, we will provide notice of material changes and obtain any necessary agreement or consent.
+        </p>
+        <p>
+          Continued use of the Bot after an update takes effect constitutes acceptance only to the extent that such acceptance is legally valid under applicable law. If you do not agree to revised Terms, discontinue using the Bot.
+        </p>
+      </article>
+
+      <article class="terms-card">
+        <span class="section-number" id="section-13">13</span>
+        <h2>Contact</h2>
+        <p>
+          For questions about these Terms, the operation of Atomic Security, or a potential violation, contact:
+        </p>
+
+        <div class="contact-card">
+          <div class="contact-row">
+            <span>Project</span>
+            <span>Atomic Security</span>
+          </div>
+          <div class="contact-row">
+            <span>Operator</span>
+            <span>[Insert operator or organization name]</span>
+          </div>
+          <div class="contact-row">
+            <span>Contact email</span>
+            <span><a href="mailto:[Insert official contact email]">[Insert official contact email]</a></span>
+          </div>
+          <div class="contact-row">
+            <span>Website</span>
+            <span>
+              <a href="https://bxncx.github.io/atomic-privacy/" target="_blank" rel="noopener noreferrer">
+                Atomic Security website
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Before publishing:</strong> replace the operator and contact email placeholders with accurate information.
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Atomic Security. All rights reserved.</span>
+      <span>Terms of Service • Last updated: October 25, 2026</span>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.toc a[href^="#"], .cta[href^="#"]').forEach(link => {
+      link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+
+        if (!target) return;
+
+        event.preventDefault();
+
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const targetTop =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          headerHeight -
+          12;
+
+        window.scrollTo({
+          top: targetTop,
+          behavior: 'smooth'
+        });
+
+        history.replaceState(null, '', `#${targetId}`);
+      });
+    });
+  </script>
+</body>
+</html>
