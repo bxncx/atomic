@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atomic Security — Legal & Privacy</title>
+  <meta name="description" content="Official legal hub for Atomic Security: Privacy Policy and Terms of Service for the Discord security bot." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0d1424;
+      --surface-2: #111a2d;
+      --border: #1f2b45;
+      --text: #e8edf7;
+      --muted: #9aa8c2;
+      --accent: #4f8cff;
+      --accent-2: #22d3ee;
+      --success: #34d399;
+      --radius: 20px;
+      --max-width: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1100px 550px at 85% -10%, rgba(79, 140, 255, .20), transparent 60%),
+        radial-gradient(900px 500px at 0% 15%, rgba(34, 211, 238, .12), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 11, 20, .82);
+      border-bottom: 1px solid rgba(31, 43, 69, .8);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #04101f;
+      font-weight: 900;
+      box-shadow: 0 12px 32px rgba(79, 140, 255, .28);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border: 1px solid rgba(79, 140, 255, .35);
+      border-radius: 999px;
+      background: rgba(79, 140, 255, .12);
+      color: #dbeafe;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .cta:hover {
+      background: rgba(79, 140, 255, .2);
+      transform: translateY(-1px);
+    }
+
+    .hero {
+      padding: 104px 0 72px;
+      border-bottom: 1px solid rgba(31, 43, 69, .65);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border: 1px solid rgba(52, 211, 153, .3);
+      border-radius: 999px;
+      background: rgba(52, 211, 153, .1);
+      color: var(--success);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 24px 0 18px;
+      font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+      line-height: 1.03;
+      letter-spacing: -.05em;
+      font-weight: 900;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 32px;
+    }
+
+    .pill {
+      padding: 8px 15px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(17, 26, 45, .75);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .documents {
+      padding: 72px 0 96px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -.04em;
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .legal-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 380px;
+      padding: 34px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(17, 26, 45, .94), rgba(13, 20, 36, .9));
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .24);
+      overflow: hidden;
+      transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+    }
+
+    .legal-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(79, 140, 255, .14), transparent 45%);
+      opacity: 0;
+      transition: opacity .25s ease;
+      pointer-events: none;
+    }
+
+    .legal-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(79, 140, 255, .45);
+      box-shadow: 0 34px 90px rgba(0, 0, 0, .32);
+    }
+
+    .legal-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(79, 140, 255, .3);
+      border-radius: 16px;
+      background: rgba(79, 140, 255, .12);
+      font-size: 24px;
+    }
+
+    .legal-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.55rem;
+      letter-spacing: -.03em;
+    }
+
+    .legal-card p {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+
+    .card-list {
+      display: grid;
+      gap: 10px;
+      margin: auto 0 28px;
+      font-size: 14px;
+      color: #c9d3e6;
+    }
+
+    .card-list div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .check {
+      display: grid;
+      place-items: center;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(52, 211, 153, .15);
+      color: var(--success);
+      font-size: 11px;
+      font-weight: 800;
+      flex: 0 0 auto;
+    }
+
+    .card-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border: 1px solid rgba(79, 140, 255, .35);
+      border-radius: 14px;
+      background: rgba(79, 140, 255, .12);
+      color: #dbeafe;
+      font-weight: 700;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .card-button:hover {
+      background: rgba(79, 140, 255, .22);
+      transform: translateY(-2px);
+    }
+
+    .trust {
+      padding: 72px 0;
+      border-top: 1px solid rgba(31, 43, 69, .65);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .trust-box {
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: rgba(13, 20, 36, .78);
+    }
+
+    .trust-box h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .trust-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid rgba(31, 43, 69, .8);
+      background: rgba(7, 11, 20, .85);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 76px 0 56px;
+      }
+
+      .cards,
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">
+        <span class="brand-mark">A</span>
+        Atomic Security
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+
+      <a class="cta" href="#documents">Legal documents</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">● Official Legal Hub</span>
+      <h1>Atomic Security<br><span>Privacy &amp; Terms</span></h1>
+      <p>
+        Access the official legal documents for Atomic Security, a Discord security and moderation bot.
+        Review how information is handled and the terms that govern use of the service.
+      </p>
+      <div class="hero-meta">
+        <span class="pill">Last updated: October 25, 2026</span>
+        <span class="pill">Discord security service</span>
+        <span class="pill">Privacy Policy</span>
+        <span class="pill">Terms of Service</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="documents" id="documents">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Choose a document</h2>
+            <p>Select the document you need. Both pages are designed to be transparent, accessible, and easy to navigate.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <article class="legal-card">
+            <div class="card-icon">🔐</div>
+            <h3>Privacy Policy</h3>
+            <p>
+              Explains what information Atomic Security may process, why it is processed, how long it is retained, and what privacy rights are available.
+            </p>
+            <div class="card-list">
+              <div><span class="check">✓</span> Data categories and processing purposes</div>
+              <div><span class="check">✓</span> Storage, retention, and third-party services</div>
+              <div><span class="check">✓</span> Privacy rights and contact details</div>
+            </div>
+            <a class="card-button" href="privacy-policy.html">
+              View Privacy Policy
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <article class="legal-card">
+            <div class="card-icon">📜</div>
+            <h3>Terms of Service</h3>
+            <p>
+              Sets out the rules for using Atomic Security, including acceptable use, administrator responsibilities, automated moderation, and service limitations.
+            </p>
+            <div class="card-list">
+              <div><span class="check">✓</span> Acceptable use and administrator duties</div>
+              <div><span class="check">✓</span> Automated moderation limitations</div>
+              <div><span class="check">✓</span> Availability, liability, and termination</div>
+            </div>
+            <a class="card-button" href="terms.html">
+              View Terms of Service
+              <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-box">
+            <h3>Transparency</h3>
+            <p>Our legal documents explain the service, its features, and the information required to operate it.</p>
+          </div>
+          <div class="trust-box">
+            <h3>Security-first design</h3>
+            <p>Atomic Security is built to support server administrators in detecting and responding to harmful activity.</p>
+          </div>
+          <div class="trust-box">
+            <h3>Responsible moderation</h3>
+            <p>Automated protections support administrators, but do not replace human review and responsible server management.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 Atomic Security. All rights reserved.</span>
+      <nav class="footer-links" aria-label="Legal links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
